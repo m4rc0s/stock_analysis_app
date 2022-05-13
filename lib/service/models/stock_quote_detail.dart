@@ -4,13 +4,13 @@ import 'package:flutter/foundation.dart';
 part 'stock_quote_detail.freezed.dart';
 part 'stock_quote_detail.g.dart';
 
-@freezed
+@unfreezed
 class StockQuoteDetail with _$StockQuoteDetail {
-  const factory StockQuoteDetail({
+  factory StockQuoteDetail({
     required String symbol,
     required String shortName,
     required double regularMarketPrice,
-    required double twoHundredDayAverage,
+    double? twoHundredDayAverage,
   }) = _StockQuoteDetail;
 
   factory StockQuoteDetail.fromJson(Map<String, Object?> json) =>

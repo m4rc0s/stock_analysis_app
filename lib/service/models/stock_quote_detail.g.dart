@@ -11,7 +11,7 @@ _$_StockQuoteDetail _$$_StockQuoteDetailFromJson(Map<String, dynamic> json) =>
       symbol: json['symbol'] as String,
       shortName: json['shortName'] as String,
       regularMarketPrice: (json['regularMarketPrice'] as num).toDouble(),
-      twoHundredDayAverage: (json['twoHundredDayAverage'] as num).toDouble(),
+      twoHundredDayAverage: (json['twoHundredDayAverage'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$$_StockQuoteDetailToJson(_$_StockQuoteDetail instance) =>

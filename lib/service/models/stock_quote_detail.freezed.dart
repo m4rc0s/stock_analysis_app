@@ -21,9 +21,13 @@ StockQuoteDetail _$StockQuoteDetailFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$StockQuoteDetail {
   String get symbol => throw _privateConstructorUsedError;
+  set symbol(String value) => throw _privateConstructorUsedError;
   String get shortName => throw _privateConstructorUsedError;
+  set shortName(String value) => throw _privateConstructorUsedError;
   double get regularMarketPrice => throw _privateConstructorUsedError;
-  double get twoHundredDayAverage => throw _privateConstructorUsedError;
+  set regularMarketPrice(double value) => throw _privateConstructorUsedError;
+  double? get twoHundredDayAverage => throw _privateConstructorUsedError;
+  set twoHundredDayAverage(double? value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,7 +44,7 @@ abstract class $StockQuoteDetailCopyWith<$Res> {
       {String symbol,
       String shortName,
       double regularMarketPrice,
-      double twoHundredDayAverage});
+      double? twoHundredDayAverage});
 }
 
 /// @nodoc
@@ -75,7 +79,7 @@ class _$StockQuoteDetailCopyWithImpl<$Res>
       twoHundredDayAverage: twoHundredDayAverage == freezed
           ? _value.twoHundredDayAverage
           : twoHundredDayAverage // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -91,7 +95,7 @@ abstract class _$$_StockQuoteDetailCopyWith<$Res>
       {String symbol,
       String shortName,
       double regularMarketPrice,
-      double twoHundredDayAverage});
+      double? twoHundredDayAverage});
 }
 
 /// @nodoc
@@ -128,7 +132,7 @@ class __$$_StockQuoteDetailCopyWithImpl<$Res>
       twoHundredDayAverage: twoHundredDayAverage == freezed
           ? _value.twoHundredDayAverage
           : twoHundredDayAverage // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -138,23 +142,23 @@ class __$$_StockQuoteDetailCopyWithImpl<$Res>
 class _$_StockQuoteDetail
     with DiagnosticableTreeMixin
     implements _StockQuoteDetail {
-  const _$_StockQuoteDetail(
+  _$_StockQuoteDetail(
       {required this.symbol,
       required this.shortName,
       required this.regularMarketPrice,
-      required this.twoHundredDayAverage});
+      this.twoHundredDayAverage});
 
   factory _$_StockQuoteDetail.fromJson(Map<String, dynamic> json) =>
       _$$_StockQuoteDetailFromJson(json);
 
   @override
-  final String symbol;
+  String symbol;
   @override
-  final String shortName;
+  String shortName;
   @override
-  final double regularMarketPrice;
+  double regularMarketPrice;
   @override
-  final double twoHundredDayAverage;
+  double? twoHundredDayAverage;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -172,28 +176,6 @@ class _$_StockQuoteDetail
       ..add(DiagnosticsProperty('twoHundredDayAverage', twoHundredDayAverage));
   }
 
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_StockQuoteDetail &&
-            const DeepCollectionEquality().equals(other.symbol, symbol) &&
-            const DeepCollectionEquality().equals(other.shortName, shortName) &&
-            const DeepCollectionEquality()
-                .equals(other.regularMarketPrice, regularMarketPrice) &&
-            const DeepCollectionEquality()
-                .equals(other.twoHundredDayAverage, twoHundredDayAverage));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(symbol),
-      const DeepCollectionEquality().hash(shortName),
-      const DeepCollectionEquality().hash(regularMarketPrice),
-      const DeepCollectionEquality().hash(twoHundredDayAverage));
-
   @JsonKey(ignore: true)
   @override
   _$$_StockQuoteDetailCopyWith<_$_StockQuoteDetail> get copyWith =>
@@ -206,11 +188,11 @@ class _$_StockQuoteDetail
 }
 
 abstract class _StockQuoteDetail implements StockQuoteDetail {
-  const factory _StockQuoteDetail(
-      {required final String symbol,
-      required final String shortName,
-      required final double regularMarketPrice,
-      required final double twoHundredDayAverage}) = _$_StockQuoteDetail;
+  factory _StockQuoteDetail(
+      {required String symbol,
+      required String shortName,
+      required double regularMarketPrice,
+      double? twoHundredDayAverage}) = _$_StockQuoteDetail;
 
   factory _StockQuoteDetail.fromJson(Map<String, dynamic> json) =
       _$_StockQuoteDetail.fromJson;
@@ -222,7 +204,7 @@ abstract class _StockQuoteDetail implements StockQuoteDetail {
   @override
   double get regularMarketPrice => throw _privateConstructorUsedError;
   @override
-  double get twoHundredDayAverage => throw _privateConstructorUsedError;
+  double? get twoHundredDayAverage => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_StockQuoteDetailCopyWith<_$_StockQuoteDetail> get copyWith =>
