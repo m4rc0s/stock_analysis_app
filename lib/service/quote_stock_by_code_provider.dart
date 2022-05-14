@@ -8,7 +8,10 @@ class QuoteStockByCodeNotifier extends StateNotifier<StockQuoteDetail> {
             symbol: '',
             shortName: '',
             regularMarketPrice: 0.0,
-            twoHundredDayAverage: 0.0));
+            twoHundredDayAverage: 0.0,
+            logourl: 'https://s3-symbol-logo.tradingview.com/weg--big.svg',
+            currency: '',
+            longName: ''));
 
   setDetail(StockQuoteDetail detail) {
     state = detail;

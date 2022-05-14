@@ -28,6 +28,12 @@ mixin _$StockQuoteDetail {
   set regularMarketPrice(double value) => throw _privateConstructorUsedError;
   double? get twoHundredDayAverage => throw _privateConstructorUsedError;
   set twoHundredDayAverage(double? value) => throw _privateConstructorUsedError;
+  String get logourl => throw _privateConstructorUsedError;
+  set logourl(String value) => throw _privateConstructorUsedError;
+  String get currency => throw _privateConstructorUsedError;
+  set currency(String value) => throw _privateConstructorUsedError;
+  String get longName => throw _privateConstructorUsedError;
+  set longName(String value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,7 +50,10 @@ abstract class $StockQuoteDetailCopyWith<$Res> {
       {String symbol,
       String shortName,
       double regularMarketPrice,
-      double? twoHundredDayAverage});
+      double? twoHundredDayAverage,
+      String logourl,
+      String currency,
+      String longName});
 }
 
 /// @nodoc
@@ -62,6 +71,9 @@ class _$StockQuoteDetailCopyWithImpl<$Res>
     Object? shortName = freezed,
     Object? regularMarketPrice = freezed,
     Object? twoHundredDayAverage = freezed,
+    Object? logourl = freezed,
+    Object? currency = freezed,
+    Object? longName = freezed,
   }) {
     return _then(_value.copyWith(
       symbol: symbol == freezed
@@ -80,6 +92,18 @@ class _$StockQuoteDetailCopyWithImpl<$Res>
           ? _value.twoHundredDayAverage
           : twoHundredDayAverage // ignore: cast_nullable_to_non_nullable
               as double?,
+      logourl: logourl == freezed
+          ? _value.logourl
+          : logourl // ignore: cast_nullable_to_non_nullable
+              as String,
+      currency: currency == freezed
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String,
+      longName: longName == freezed
+          ? _value.longName
+          : longName // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -95,7 +119,10 @@ abstract class _$$_StockQuoteDetailCopyWith<$Res>
       {String symbol,
       String shortName,
       double regularMarketPrice,
-      double? twoHundredDayAverage});
+      double? twoHundredDayAverage,
+      String logourl,
+      String currency,
+      String longName});
 }
 
 /// @nodoc
@@ -115,6 +142,9 @@ class __$$_StockQuoteDetailCopyWithImpl<$Res>
     Object? shortName = freezed,
     Object? regularMarketPrice = freezed,
     Object? twoHundredDayAverage = freezed,
+    Object? logourl = freezed,
+    Object? currency = freezed,
+    Object? longName = freezed,
   }) {
     return _then(_$_StockQuoteDetail(
       symbol: symbol == freezed
@@ -133,6 +163,18 @@ class __$$_StockQuoteDetailCopyWithImpl<$Res>
           ? _value.twoHundredDayAverage
           : twoHundredDayAverage // ignore: cast_nullable_to_non_nullable
               as double?,
+      logourl: logourl == freezed
+          ? _value.logourl
+          : logourl // ignore: cast_nullable_to_non_nullable
+              as String,
+      currency: currency == freezed
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String,
+      longName: longName == freezed
+          ? _value.longName
+          : longName // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -146,7 +188,10 @@ class _$_StockQuoteDetail
       {required this.symbol,
       required this.shortName,
       required this.regularMarketPrice,
-      this.twoHundredDayAverage});
+      this.twoHundredDayAverage,
+      required this.logourl,
+      required this.currency,
+      required this.longName});
 
   factory _$_StockQuoteDetail.fromJson(Map<String, dynamic> json) =>
       _$$_StockQuoteDetailFromJson(json);
@@ -159,10 +204,16 @@ class _$_StockQuoteDetail
   double regularMarketPrice;
   @override
   double? twoHundredDayAverage;
+  @override
+  String logourl;
+  @override
+  String currency;
+  @override
+  String longName;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'StockQuoteDetail(symbol: $symbol, shortName: $shortName, regularMarketPrice: $regularMarketPrice, twoHundredDayAverage: $twoHundredDayAverage)';
+    return 'StockQuoteDetail(symbol: $symbol, shortName: $shortName, regularMarketPrice: $regularMarketPrice, twoHundredDayAverage: $twoHundredDayAverage, logourl: $logourl, currency: $currency, longName: $longName)';
   }
 
   @override
@@ -173,7 +224,10 @@ class _$_StockQuoteDetail
       ..add(DiagnosticsProperty('symbol', symbol))
       ..add(DiagnosticsProperty('shortName', shortName))
       ..add(DiagnosticsProperty('regularMarketPrice', regularMarketPrice))
-      ..add(DiagnosticsProperty('twoHundredDayAverage', twoHundredDayAverage));
+      ..add(DiagnosticsProperty('twoHundredDayAverage', twoHundredDayAverage))
+      ..add(DiagnosticsProperty('logourl', logourl))
+      ..add(DiagnosticsProperty('currency', currency))
+      ..add(DiagnosticsProperty('longName', longName));
   }
 
   @JsonKey(ignore: true)
@@ -192,7 +246,10 @@ abstract class _StockQuoteDetail implements StockQuoteDetail {
       {required String symbol,
       required String shortName,
       required double regularMarketPrice,
-      double? twoHundredDayAverage}) = _$_StockQuoteDetail;
+      double? twoHundredDayAverage,
+      required String logourl,
+      required String currency,
+      required String longName}) = _$_StockQuoteDetail;
 
   factory _StockQuoteDetail.fromJson(Map<String, dynamic> json) =
       _$_StockQuoteDetail.fromJson;
@@ -205,6 +262,12 @@ abstract class _StockQuoteDetail implements StockQuoteDetail {
   double get regularMarketPrice => throw _privateConstructorUsedError;
   @override
   double? get twoHundredDayAverage => throw _privateConstructorUsedError;
+  @override
+  String get logourl => throw _privateConstructorUsedError;
+  @override
+  String get currency => throw _privateConstructorUsedError;
+  @override
+  String get longName => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_StockQuoteDetailCopyWith<_$_StockQuoteDetail> get copyWith =>

@@ -12,6 +12,9 @@ _$_StockQuoteDetail _$$_StockQuoteDetailFromJson(Map<String, dynamic> json) =>
       shortName: json['shortName'] as String,
       regularMarketPrice: (json['regularMarketPrice'] as num).toDouble(),
       twoHundredDayAverage: (json['twoHundredDayAverage'] as num?)?.toDouble(),
+      logourl: json['logourl'] as String,
+      currency: json['currency'] as String,
+      longName: json['longName'] as String,
     );
 
 Map<String, dynamic> _$$_StockQuoteDetailToJson(_$_StockQuoteDetail instance) =>
@@ -20,4 +23,7 @@ Map<String, dynamic> _$$_StockQuoteDetailToJson(_$_StockQuoteDetail instance) =>
       'shortName': instance.shortName,
       'regularMarketPrice': instance.regularMarketPrice,
       'twoHundredDayAverage': instance.twoHundredDayAverage,
+      'logourl': instance.logourl,
+      'currency': instance.currency,
+      'longName': instance.longName,
     };
